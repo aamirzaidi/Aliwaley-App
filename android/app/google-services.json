@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "262212507141",
+    "firebase_url": "https://aliwaley-ac171.firebaseio.com",
+    "project_id": "aliwaley-ac171",
+    "storage_bucket": "aliwaley-ac171.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262212507141:android:b5f83d857e747965ccae6c",
+        "android_client_info": {
+          "package_name": "com.carelesscoders.aliwaley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262212507141-2d4ohfbbf77de6jpasl2or0lc8d6jnu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ZGjFj_PMh5_t1bpZuavRRnK73K5gpVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262212507141-2d4ohfbbf77de6jpasl2or0lc8d6jnu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8718878643967075~5132834268"
+    }
+  ],
+  "configuration_version": "1"
+}
