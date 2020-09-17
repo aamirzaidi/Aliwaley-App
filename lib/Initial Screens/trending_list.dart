@@ -23,7 +23,7 @@ class Trending extends StatelessWidget {
 }
 
 class TrendingListGenerator extends StatelessWidget {
-  final fireStore=Firestore.instance;
+  final fireStore=FirebaseFirestore.instance;
 
   _launchAdvertisementURL(String url) async {
     if (await canLaunch(url)) {
@@ -37,7 +37,7 @@ class TrendingListGenerator extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
       stream: fireStore.collection('trending_events').snapshots(),
-      builder: (BuildContext context, AsyncSnapshot snapshot){
+      builder: (BuildContext context,snapshot){
         if(!snapshot.hasData){
           return Container(child: SpinKitFadingCircle(
             color: Colors.orange,
@@ -47,7 +47,7 @@ class TrendingListGenerator extends StatelessWidget {
         if(snapshot.hasError){
           return Center(child: Text('Something Wrong'),);
         }
-        final events = snapshot.data.documents;
+        final events = snapshot.data.docs;
         if(events.length==0){
           return Container(
             height: double.infinity,
@@ -75,7 +75,7 @@ class TrendingListGenerator extends StatelessWidget {
                             if(index == 0){
                               return StreamBuilder<QuerySnapshot>(
                                 stream: fireStore.collection('advertise').snapshots(),
-                                builder: (BuildContext context, AsyncSnapshot snapshot){
+                                builder: (BuildContext context,snapshot){
                                   if(!snapshot.hasData){
                                     return Container(child: SpinKitChasingDots(
                                       color: Colors.orange,
@@ -86,17 +86,17 @@ class TrendingListGenerator extends StatelessWidget {
                                     return Center(child: Text('Something Wrong'),);
                                   }
                                   try{
-                                    var adv = snapshot.data.documents[0];
-                                    if ((adv!=null && adv.data["imageUrl"] != null)) {
+                                    var adv = snapshot.data.docs[0];
+                                    if ((adv!=null && adv.get("imageUrl") != null)) {
                                       return Padding(
                                         padding: const EdgeInsets.only(top:4.0,bottom:4.0),
                                         child: GestureDetector(
                                           onTap: (){
-                                            if(adv.data["adUrl"] == null){
+                                            if(adv.get("adUrl") == null){
                                               Navigator.push(context, MaterialPageRoute(builder: (context) => AdvertiseInfo()));
                                             }
                                             else{
-                                              _launchAdvertisementURL(adv.data["adUrl"]);
+                                              _launchAdvertisementURL(adv.get("adUrl"));
                                             }
                                           },
                                           child: Container(
@@ -105,7 +105,7 @@ class TrendingListGenerator extends StatelessWidget {
                                             width: double.infinity,
                                             child: Image(
                                               fit: BoxFit.scaleDown,
-                                              image: NetworkImage(adv.data["imageUrl"]),
+                                              image: NetworkImage(adv.get("imageUrl")),
                                             ),
                                           ),
                                         ),
@@ -129,20 +129,20 @@ class TrendingListGenerator extends StatelessWidget {
                               );
                             }
                             return EventCard(
-                              videoURL: events[index-1].data["videoUrl"],
-                              channelName: events[index-1].data["channelName"],
-                              authorURL: events[index-1].data["authorUrl"],
-                              videoTitle: events[index-1].data["title"],
-                              thumbnailURL: events[index-1].data["thumbnailUrl"],
+                              videoURL: events[index-1].get("videoUrl"),
+                              channelName: events[index-1].get("channelName"),
+                              authorURL: events[index-1].get("authorUrl"),
+                              videoTitle: events[index-1].get("title"),
+                              thumbnailURL: events[index-1].get("thumbnailUrl"),
                             );
                           },
                           separatorBuilder: (context, index){
-                            if (index != 0 && index % 4 == 0){
-                              return AdmobBanner(
-                                adUnitId: 'ca-app-pub-8718878643967075/2315099230',
-                                adSize: AdmobBannerSize.BANNER,
-                              );
-                            }
+//                            if (index != 0 && index % 4 == 0){
+//                              return AdmobBanner(
+//                                adUnitId: 'ca-app-pub-8718878643967075/2315099230',
+//                                adSize: AdmobBannerSize.BANNER,
+//                              );
+//                            }
                             return Divider(
                               thickness: 0.0,
                               height: 0.0,

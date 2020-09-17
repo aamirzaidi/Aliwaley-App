@@ -56,16 +56,34 @@ class NoheKhanPage extends StatelessWidget {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  spotifyUrl != null ? IconButton(icon: Icon(Entypo.spotify,color: Colors.green,size: 30.0,),
-                  onPressed: (){
-                    launchURL(spotifyUrl);
-                  },
-                  ) : SizedBox(width: 0,height: 0,),
-                  youtubeUrl != null ? IconButton(icon: Icon(AntDesign.youtube,color: Colors.red,size: 30.0,),
-                    onPressed: (){
-                    launchURL(youtubeUrl);
-                    },
-                  ): SizedBox(width: 0,height: 0,),
+                  Column(
+                    children: [
+                      spotifyUrl != null ? Padding(
+                        padding: const EdgeInsets.all(1.0),
+                        child: IconButton(icon: Icon(Entypo.spotify,color: Colors.green,size: 30.0,),
+                        onPressed: (){
+                          launchURL(spotifyUrl);
+                        },
+                        ),
+                      ) : SizedBox(width: 0,height: 0,),
+                      spotifyUrl != null ? Text('Spotify',style: TextStyle(color: Colors.black54,fontFamily: 'Sniglet',fontSize: 12.5),)
+                      : SizedBox(width: 0,height: 0,),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      youtubeUrl != null ? Padding(
+                        padding: const EdgeInsets.all(1.0),
+                        child: IconButton(icon: Icon(AntDesign.youtube,color: Colors.red,size: 30.0,),
+                          onPressed: (){
+                          launchURL(youtubeUrl);
+                          },
+                        ),
+                      ): SizedBox(width: 0,height: 0,),
+                      spotifyUrl != null ? Text('Youtube',style: TextStyle(color: Colors.black54,fontFamily: 'Sniglet',fontSize: 12.5),)
+                          : SizedBox(width: 0,height: 0,),
+                    ],
+                  ),
                 ],
               ),
               SizedBox(height: 20.0,),

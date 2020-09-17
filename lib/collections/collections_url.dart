@@ -1,4 +1,22 @@
 //NADEEM SARWAR
+
+List<String> naddemSarwar2020_Urls = [
+  'https://www.youtube.com/watch?v=Y5EJ8Y_v4BA',
+  'https://www.youtube.com/watch?v=NKqRW6i92ms&list=PLlFalP-EAOebAR5qUSxFRFEtu07bR2LhP&index=2',
+  'https://www.youtube.com/watch?v=-qQ4SjZyEUg&list=PLlFalP-EAOebAR5qUSxFRFEtu07bR2LhP&index=6',
+  'https://www.youtube.com/watch?v=2vSE2iaDk_w&list=PLlFalP-EAOebAR5qUSxFRFEtu07bR2LhP&index=8',
+  'https://www.youtube.com/watch?v=iglW3c0KEFk&list=PLlFalP-EAOebAR5qUSxFRFEtu07bR2LhP&index=10',
+];
+
+List<String> nadeemSarwar2020_Names=[
+  'Salam Hussain',
+  'Mazloom Ka Matam' ,
+  'Mera Mazloom Hussain',
+  'Peer Ghazi',
+  'Maula Imam E Raza',
+];
+
+
 List<String> naddemSarwar2019_Urls = [
   'https://www.youtube.com/watch?v=-WfSXllwJfc',
   'https://www.youtube.com/watch?v=I1X8RLagiMs',
@@ -166,6 +184,49 @@ List<String> mirhasanNohe_2019Names = [
   'Madad Karo Fizza',
 ];
 
+List<String> mirhasanNohe_2018Urls = [
+  'https://www.youtube.com/watch?v=k82s6KOCz8A&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=1',
+  'https://www.youtube.com/watch?v=JUMxGpHSSXk&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=2',
+  'https://www.youtube.com/watch?v=qfliK2j8afk&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=3',
+  'https://www.youtube.com/watch?v=dctWUdOTsIo&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=4',
+  'https://www.youtube.com/watch?v=8Pc00iVQvjk&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=5',
+  'https://www.youtube.com/watch?v=9W4_ySUMv50&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=6',
+  'https://www.youtube.com/watch?v=nEwC_eVn-38&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=7',
+  'https://www.youtube.com/watch?v=cCTmKZES0M8&list=PLcMdf1V5wjAm2ppEulfRUlpIg2VDO8GD1&index=8',
+];
+
+List<String> mirhasanNohe_2018Names = [
+  'Pursa Hussain Ka',
+  'Habib Aa Jao',
+  'Daikhte Jana Ali Akhbar',
+  'Asghar Main Teri Maa hun',
+  'Zahra Jaiyan Da Asra Ghazi',
+  'Haye Qasim',
+  'Tu Agar Hota To Aisa Nahi Hota Ghazi',
+  'Zainab Ghale Ko Choom Le',
+];
+
+List<String> mirhasanNohe_2017Urls = [
+  'https://www.youtube.com/watch?v=83yunoVTpLk&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=1',
+  'https://www.youtube.com/watch?v=LQk0CQ9mbT0&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=2',
+  'https://www.youtube.com/watch?v=gacwqvD3XrY&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=3',
+  'https://www.youtube.com/watch?v=JhMwOa1mZPU&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=4',
+  'https://www.youtube.com/watch?v=p2qQQ-Is9bE&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=5',
+  'https://www.youtube.com/watch?v=-yWcYqGohhE&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=6',
+  'https://www.youtube.com/watch?v=NOJ14To5P_k&list=PLcMdf1V5wjAlhRtboWk_RvJiu2APoL237&index=7',
+  ];
+
+List<String> mirhasanNohe_2017Names = [
+  'Abbas Tera Haq Hain',
+  'Khuda Khair Karey',
+  'Zakhm e Akbar(as) Pay Laila Rida Daal Do',
+  'Qaid Khanay Say Sakina(sa) K',
+  ';Ya Fatima (sa) Ridaa Main',
+  'Teeron Kay Musalay Par',
+  'Dekha Jab Baap Ka Lasha Tuo Sakina (sa) Roi',
+];
+
+
 List<String> mirhasanManqabat_2019Names = [
   'Sana Masooma e Qum Ki',
   'Khuda Ki Pehchan Ban Ke Jab Se Mujhe Taruf Huwa Hasan K',
@@ -190,7 +251,23 @@ List<String> mirhasanManqabat_2019Urls = [
   'https://www.youtube.com/watch?v=65aHYKGEHLk',
 ];
 
+List<String> mirhasanManqabat_2018Names = [
+  'Allah o Akbar Ya Ali',
+  'Faqeer Ki Sada Hussain',
+  'Wo Ghar Kay Hukam Jahan Fatima (sa) Kay Chaltay Hai',
+  'Aao Tareekh Sunaon Main Shab e Hijrat Ki',
+  'Aa Gaya Shabaan ☆ Khushion Kay Zamanay Aa Gaye',
+  'Abbas (ع) Haider (ع) Jaisa',
+];
 
+List<String> mirhasanManqabat_2018Urls = [
+  'https://www.youtube.com/watch?v=sQo4-LFVYyo&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=1',
+  'https://www.youtube.com/watch?v=olhc2iLxXsU&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=2',
+  'https://www.youtube.com/watch?v=HAa9cd5_Dv0&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=3',
+  'https://www.youtube.com/watch?v=2pAgjIf7-sg&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=4',
+  'https://www.youtube.com/watch?v=OzEvyKj5X6o&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=5',
+  'https://www.youtube.com/watch?v=_8ZNJT4AVbY&list=PLcMdf1V5wjAknuiXiOhdeXgIXc74G8YsX&index=6',
+];
 
 
 
@@ -355,11 +432,24 @@ List<String> syedRazaAbbasZaidi_Nohe2018_Names = [
 List<String> farhanAliWaris_Nohe2020Urls = [
   'https://www.youtube.com/watch?v=iv1soBgNbyc',
   'https://www.youtube.com/watch?v=kxx-Y7gUO38',
+  'https://www.youtube.com/watch?v=xrk0omPhsQw&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=1',
+  'https://www.youtube.com/watch?v=XmAFv-9ftlI&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=2',
+  'https://www.youtube.com/watch?v=SOsSSfRZv6A&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=3',
+  'https://www.youtube.com/watch?v=jYvQrdiM4mQ&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=4',
+  'https://www.youtube.com/watch?v=vmcBL95S7Pg&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=6',
+  'https://www.youtube.com/watch?v=PPBHqlJZsAs&list=PLTiST0TYMdoAGeg16OeAL93TB6Mzzyr0P&index=7',
+
 ];
 
 List<String> farhanAliWaris_Nohe2020Names = [
   'abr E Zehra Dhoop Main',
   'Roza Daro Khak Karo',
+  'Shehenshah Hussain',
+  'Baba Jan',
+  'Azadari Na CHodenge',
+  'Vekh Zulman De Inteha Ghazi',
+  'Abbas Ya Mola',
+  'Jis Ne Jesa Chahe Usne Wese Mara',
 ];
 
 List<String> farhanAliWaris_Manqabat2020Urls = [
@@ -407,7 +497,62 @@ List<String> farhanAliWaris_Nohe2019Names = [
   'Alwida Ay Hussain',
 ];
 
+List<String> farhanAliWaris_Nohe2018Urls = [
+  'https://www.youtube.com/watch?v=IZUClsVyfvY',
+  'https://www.youtube.com/watch?v=9-LZgBBRDR4',
+  'https://www.youtube.com/watch?v=n282jVAlJQU',
+  'https://www.youtube.com/watch?v=fNUnjg72CY0',
+  'https://www.youtube.com/watch?v=lxXYv0Px_V8',
+  'https://www.youtube.com/watch?v=Eo75Ow3QmCk',
+];
+
+List<String> farhanAliWaris_Nohe2018Names = [
+  'Agar Hussain Tera Ghum',
+  'Kesy Abbas Mera',
+  'Kash Akbar Tere Jaisa',
+  'Kis Tarha Baap Say Beti Ko',
+  'Main Bali Sakina Hun',
+  'Nabi Ka Nawasa Hun',
+];
+
+List<String> farhanAliWaris_Nohe2017Urls = [
+  'https://www.youtube.com/watch?v=h9kyf6BfQFA',
+  'https://www.youtube.com/watch?v=p0WDASbqYxw&list=RDp0WDASbqYxw&index=1',
+  'https://www.youtube.com/watch?v=-at8mKGN4Pg',
+  'https://www.youtube.com/watch?v=TYByH86L8WE',
+  'https://www.youtube.com/watch?v=NE3vlWqAapU',
+
+
+
+];
+List<String> farhanAliWaris_Nohe2017Names = [
+  'Amma Fizza Abbas Ko Bulana',
+  'Bhai Hussain kya ye tumhari hi lash ha',
+  'Jawan Ki Lash Uthana',
+  'Kahan Ghareeb Ka Ghar',
+  'Yateemi Hai Sakina Hai',
+];
+
+
 //SHADMAN Raza
+
+List<String> shadmanRaza_2020NoheUrl =
+[
+  'https://www.youtube.com/watch?v=Da3utcJpvME',
+  'https://www.youtube.com/watch?v=Ea4_lX1H_WY',
+  'https://www.youtube.com/watch?v=7HtDqxrVSPc',
+  'https://www.youtube.com/watch?v=hSudmEbuZTE',
+];
+
+List<String> shadmanRaza_2020NoheNames =
+[
+  'Qaim Hai Karbala | Noha on Karbala & Imam e Zamana a.s',
+  'Salam Un Alek Ya Ghareb Hussaina Balti',
+  'Jo Bhe Parcham',
+  'Ya Fatima Zahra (sa)',
+];
+
+
 List<String> shadmanRaza_2019NoheUrl =
 [
   'https://www.youtube.com/watch?v=ZtaXO5yZqII&list=PLuTxJpuPOKjMmjz13UeU18wX__wEm4967',
@@ -454,11 +599,110 @@ List<String> shadmanRaza_2018NoheNames = [
 //Irfan Haider
 List<String> irfanHaider_Nohe2020Urls = [
   'https://www.youtube.com/watch?v=GO-anoVfI4c&list=PLupt-ukxR-Cn2GlSzZPPEY0dCejLBATpx',
-];
-List<String> irfanHaider_Nohe2020Names = [
-  'Ali Ali Haye Ali',
+  'https://www.youtube.com/watch?v=RrTOS6ulg1E',
+  'https://www.youtube.com/watch?v=U9pEWA-LmpM',
+  'https://www.youtube.com/watch?v=YuSnXFNX56I',
+  'https://www.youtube.com/watch?v=netWngGYNho',
+  'https://www.youtube.com/watch?v=Ghkpp7NrHVg',
 ];
 
+List<String> irfanHaider_Nohe2020Names = [
+  'Ali Ali Haye Ali',
+  'Mai Bhi Azadar Ho Aur Tum Bhi',
+  'Ali (as) Rehbar',
+  'Aah Ya Hussain (as)',
+  'Haye Maa Pyari Maa',
+  'Pyare Nabi (saww) Ke Pyare Hussain (as)',
+];
+
+List<String> irfanHaider_Nohe2019Urls = [
+  'https://www.youtube.com/watch?v=xR1k2yc9EbA',
+  'https://www.youtube.com/watch?v=xyfYJxnnFFI',
+  'https://www.youtube.com/watch?v=ABfmYSNgnPI',
+  'https://www.youtube.com/watch?v=xvIlhMTDwN4',
+  'https://www.youtube.com/watch?v=319-jKwNia4',
+  'https://www.youtube.com/watch?v=XLaJPrmFJlQ',
+];
+
+List<String> irfanHaider_Nohe2019Names = [
+  'Sultan-e-Karbala',
+  'Wada',
+  'Yad-e-Abbas',
+  'Alama Waliya',
+  'Bas Ek Chaddar',
+  'Allah Jane Yeh Duniya Kesi Hai ',
+];
+
+
+List<String> irfanHaider_Nohe2018Urls = [
+  'https://www.youtube.com/watch?v=D9oY_wFc7_U',
+  'https://www.youtube.com/watch?v=6Kldns_sxrQ&list=RDD9oY_wFc7_U&index=2',
+  'https://www.youtube.com/watch?v=X-jUOTGIMOg',
+  'https://www.youtube.com/watch?v=6Kldns_sxrQ',
+  'https://www.youtube.com/watch?v=SycZ0UVgaQM'
+];
+
+List<String> irfanHaider_Nohe2018Names = [
+  'Abbas Sughra Sy Kaho',
+  'Bazar E Shaam Zainab',
+  'Ali Ya Ali Haide',
+  ' Bazar E Shaam Zainab',
+  'Kash Abbas a.s Tum Wahan Hote',
+];
+
+//Ali Safdar
+
+List<String> aliSafdar_Nohe2020Urls = [
+  'https://www.youtube.com/watch?v=th33pF1KV78&list=PLZcxvx0DU5ma0WLORMTNd9tOcsQXdXzPO&index=1',
+  'https://www.youtube.com/watch?v=DZos_cHK6tA&list=PLZcxvx0DU5ma0WLORMTNd9tOcsQXdXzPO&index=2',
+  'https://www.youtube.com/watch?v=a76SXCKnJ-U&list=PLZcxvx0DU5ma0WLORMTNd9tOcsQXdXzPO&index=3',
+  'https://www.youtube.com/watch?v=aDUWuTpApCU&list=PLZcxvx0DU5ma0WLORMTNd9tOcsQXdXzPO&index=4',
+];
+
+List<String> aliSafdar_Nohe2020Names = [
+  'AEY FATIMA KAY LAL as',
+  'NA MARO KHUDARA NA MARO',
+  'KHAK ARMAN HOWE MERA ALI AKBAR NA RAHA',
+  'HAEY HUSSAINA a.s.',
+];
+
+List<String> aliSafdar_Nohe2019Urls = [
+  'https://www.youtube.com/watch?v=nPymAL7tAnk&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=1',
+  'https://www.youtube.com/watch?v=ljrO8fuMIu0&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=2',
+  'https://www.youtube.com/watch?v=C0QOeig2vjY&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=3',
+  'https://www.youtube.com/watch?v=yPsLOz8ecTM&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=4',
+  'https://www.youtube.com/watch?v=ZVCcJgzQzYQ&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=5',
+  'https://www.youtube.com/watch?v=6Dvq0qab-iw&list=PLZcxvx0DU5mbVqsxOkfRmu72A1fSDShsZ&index=6',
+];
+
+List<String> aliSafdar_Nohe2019Names = [
+  'Momino Haider-e-Karrar as',
+  'Hum Aashiq-e-Hussain as Hayn',
+  'Aey Khuda Hay Yahi He Aarzoo',
+  'Hasan as Hussain as subkay hayn',
+  'Labbaik Ya Hussain a.s',
+  'Aa Gain Logo Zahra s.a',
+];
+
+List<String> aliSafdar_Nohe2018Urls = [
+  'https://www.youtube.com/watch?v=SUgn3294fA0&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=1',
+  'https://www.youtube.com/watch?v=jCqnKull3DU&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=2',
+  'https://www.youtube.com/watch?v=YfJ1G6cnpKA&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=3',
+  'https://www.youtube.com/watch?v=YMJmZQN0FGg&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=4',
+  'https://www.youtube.com/watch?v=Om52N8FZ8w8&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=5',
+  'https://www.youtube.com/watch?v=ZNgUeD-zqfA&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=6',
+  'https://www.youtube.com/watch?v=SS9PZuZM5Dk&list=PLZcxvx0DU5mZXgfzsc6haFMlM51uiYkit&index=7',
+];
+
+List<String> aliSafdar_Nohe2018Names = [
+  'Munn Aashiq-e-Hussainum',
+  'Syyedi Ya Mazloom Ya AbaAbdillah',
+  'Ali Akber A.S Aa Jaa',
+  'Gulooey Shah Per',
+  'Imam-e-Zamana A.S',
+  'Girya Kunaa Hain Zahra S.A',
+  'Mere Baba Ne Mera Nam Sakina s.a Rakha'
+];
 
 
 List<String> mukhtarNama = [

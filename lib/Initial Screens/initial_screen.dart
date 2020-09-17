@@ -1,14 +1,17 @@
 import 'package:aliwaley/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:frino_icons/frino_icons.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:frino_icons/frino_icons.dart';
 import 'package:aliwaley/collections/collections_page.dart';
-import '../addevent_info.dart';
 import 'package:aliwaley/Initial Screens/upcoming_events.dart';
 import 'package:aliwaley/Initial Screens/trending_list.dart';
 import '../advertise_info.dart';
 import '../supportus_info.dart';
-import 'package:admob_flutter/admob_flutter.dart';
+import 'package:aliwaley/Initial Screens/oganisation.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:overlay_support/overlay_support.dart';
+import 'package:aliwaley/newspage.dart';
 
 class InitialScreen extends StatefulWidget {
   @override
@@ -16,30 +19,87 @@ class InitialScreen extends StatefulWidget {
 }
 
 class _InitialScreenState extends State<InitialScreen> with TickerProviderStateMixin{
-  TabController controller;
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   @override
   void initState() {
-    Admob.initialize('ca-app-pub-8718878643967075~5132834268');
+//    Admob.initialize('ca-app-pub-8718878643967075~5132834268');
     super.initState();
+    _firebaseMessaging.configure(
+      onMessage: (Map<String, dynamic> message) async {
+        print("onMessage: $message");
+        showOverlayNotification((context) {
+          return Card(
+            margin: const EdgeInsets.symmetric(horizontal: 4),
+            child: SafeArea(
+              child: ListTile(
+                leading: SizedBox.fromSize(
+                    size: const Size(40, 40),
+                    child: ClipOval(
+                        child: Container(
+                          color: Colors.black,
+                        ))),
+                title: Text(message['notification']['title']),
+                subtitle: Text(message['notification']['body']),
+                trailing: IconButton(
+                    icon: Icon(Icons.close),
+                    onPressed: () {
+                      OverlaySupportEntry.of(context).dismiss();
+                    }),
+              ),
+            ),
+          );
+        }, duration: Duration(milliseconds: 10000));
+      },
+      onLaunch: (Map<String, dynamic> message) async {
+        print("onLaunch: $message");
+      },
+      onResume: (Map<String, dynamic> message) async {
+        print("onResume: $message");
+      },
+    );
   }
-  
+
+  int selectedIndex = 0;
+  final tabs = [
+    Trending(),
+    UpcomingEvents(),
+    Organisation(),
+    CollectionsWidget(),
+  ];
+
+  String selectedIndexName(){
+    switch(selectedIndex){
+      case 0 : return 'Trending';
+      case 1 : return 'Events';
+      case 2 : return 'Organisation';
+      case 3 : return 'Collection';
+      default : return 'Ali Waley';
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      floatingActionButton: new FloatingActionButton(
-        heroTag: null,
-        child: Icon(
-          MaterialCommunityIcons.fire, size: 40.0, color: Colors.orange,),
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return CollectionsPage();
-          }));
-        },
-        backgroundColor: Colors.black,
-      ),
+    bottomNavigationBar:FancyBottomNavigation(
+      circleColor: Colors.orange,
+      inactiveIconColor: Colors.black87,
+      textColor: Colors.black87,
+      tabs: [
+        TabData(iconData: MaterialCommunityIcons.fire, title: "Trending"),
+        TabData(iconData: MaterialIcons.event_note, title: "Events"),
+        TabData(iconData: Octicons.organization, title: "Organisation"),
+        TabData(iconData: MaterialIcons.collections, title: "Collection")
+      ],
+      onTabChangedListener: (position) {
+        setState(() {
+          selectedIndex = position;
+        });
+      },
+    ),
       backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
@@ -49,19 +109,17 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
             fontFamily: 'Merienda',
             fontSize: 32.0,
             fontWeight: FontWeight.bold),),
-        bottom: PreferredSize(preferredSize: Size.fromHeight(50.0),
-          child: Column(//why used column , remove it maybe??
-            children: <Widget>[
-              TabBar(
-                indicatorSize: TabBarIndicatorSize.label,
-                indicatorColor: Colors.white,
-                tabs: <Widget>[
-                  Tab(text: 'Trending',),
-                  Tab(text: 'Events',),
-                ],
-              )
-            ],
-          ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: IconButton(icon: Icon(FlutterIcons.newspaper_o_faw,color: ,), onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
+            }),
+          )
+        ],
+        bottom: PreferredSize(preferredSize: Size.fromHeight(35.0),
+          child:
+          Text(selectedIndexName(),style: TextStyle(fontFamily: 'Sniglet',fontSize: 28.0,color: Colors.white),),
         ),
       ),
       drawer: Drawer(
@@ -88,17 +146,9 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
                 Column(
                   children: <Widget>[
                     ListTile(
-                      title: Text('Collection',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return CollectionsPage();
-                        }));
-                      },
-                    ),
-                    ListTile(
-                      title: Text('Add an event',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
+                      title: Text('News',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => AddEventInfo()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
                       },
                     ),
                     ListTile(
@@ -138,12 +188,7 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft: Radius.circular(40.0))),
-        child: TabBarView(
-          children: <Widget>[
-            Trending(),
-            UpcomingEvents(),
-          ],
-        ),
+        child: tabs[selectedIndex],
       ),);
   }
 }
@@ -158,3 +203,4 @@ class DrawerIcon extends StatelessWidget {
     );
   }
 }
+

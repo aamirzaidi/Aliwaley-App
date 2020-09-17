@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "262212507141-ug2rd2ffu65653iiilj3b0cnk8gfjqlu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.carelesscoders.aliwaley",
+            "certificate_hash": "d3b262c74df1b652a7d11df56eebd58f1d268b95"
+          }
+        },
+        {
           "client_id": "262212507141-2d4ohfbbf77de6jpasl2or0lc8d6jnu3.apps.googleusercontent.com",
           "client_type": 3
         }
