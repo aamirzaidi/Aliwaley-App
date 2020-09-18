@@ -111,11 +111,13 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
             fontWeight: FontWeight.bold),),
         actions: [
           Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: IconButton(icon: Icon(FlutterIcons.newspaper_o_faw,color: ,), onPressed: (){
+            padding: const EdgeInsets.only(right: 3.0),
+            child: IconButton(icon: Icon(FlutterIcons.newspaper_o_faw,color: Colors.white,), onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
             }),
-          )
+          ),
+//          Text('NEWS',style: TextStyle(color: Colors.white,fontSize: y*0.02,fontWeight: FontWeight.bold),)
+
         ],
         bottom: PreferredSize(preferredSize: Size.fromHeight(35.0),
           child:

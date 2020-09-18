@@ -44,6 +44,8 @@ dependencies:
   firebase_messaging: ^7.0.0
   fancy_bottom_navigation: ^0.3.2
   overlay_support: ^1.0.5
+  expand_widget: ^1.0.0+2
+  flutter_gradient_colors: ^1.0.0
 
   flutter:
     sdk: flutter
@@ -95,6 +97,13 @@ flutter:
         - asset: fonts/Gilroy-Light.ttf
         - asset: fonts/Gilroy-Medium.ttf
 
+    - family: Quicksand
+      fonts:
+        - asset: fonts/Quicksand-Light.ttf
+        - asset: fonts/Quicksand-Medium.ttf
+        - asset: fonts/Quicksand-Regular.ttf
+        - asset: fonts/Quicksand-Bold.ttf
+        - asset: fonts/Quicksand-SemiBold.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
