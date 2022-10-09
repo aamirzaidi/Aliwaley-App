@@ -8,7 +8,7 @@ class VideoData{
   Future<dynamic> getDetail() async {
     String embedUrl = "https://www.youtube.com/oembed?url=$userUrl&format=json";
     //store http request response to res variable
-    var res = await http.get(embedUrl);
+    var res = await http.get(Uri.http(embedUrl, ""));
     print("get youtube detail status code: " + res.statusCode.toString());
 
     try {

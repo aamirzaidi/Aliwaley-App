@@ -4,10 +4,10 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AddEventInfo extends StatelessWidget {
-  
-  final fireStore = Firestore.instance;
+
+  final fireStore = FirebaseFirestore.instance;
   String fieldOne, fieldTwo , fieldThree , fieldFour , fieldFive, fieldSix;
-  
+
   launchCaller(String num) async {
     String url = "tel:$num";
     if (await canLaunch(url)) {

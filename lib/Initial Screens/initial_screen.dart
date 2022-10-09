@@ -8,7 +8,7 @@ import 'package:aliwaley/Initial Screens/trending_list.dart';
 import '../advertise_info.dart';
 import '../supportus_info.dart';
 import 'package:aliwaley/Initial Screens/oganisation.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:aliwaley/newspage.dart';
@@ -19,45 +19,46 @@ class InitialScreen extends StatefulWidget {
 }
 
 class _InitialScreenState extends State<InitialScreen> with TickerProviderStateMixin{
-  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   @override
   void initState() {
 //    Admob.initialize('ca-app-pub-8718878643967075~5132834268');
     super.initState();
-    _firebaseMessaging.configure(
-      onMessage: (Map<String, dynamic> message) async {
-        print("onMessage: $message");
-        showOverlayNotification((context) {
-          return Card(
-            margin: const EdgeInsets.symmetric(horizontal: 4),
-            child: SafeArea(
-              child: ListTile(
-                leading: SizedBox.fromSize(
-                    size: const Size(40, 40),
-                    child: ClipOval(
-                        child: Container(
-                          color: Colors.black,
-                        ))),
-                title: Text(message['notification']['title']),
-                subtitle: Text(message['notification']['body']),
-                trailing: IconButton(
-                    icon: Icon(Icons.close),
-                    onPressed: () {
-                      OverlaySupportEntry.of(context).dismiss();
-                    }),
-              ),
-            ),
-          );
-        }, duration: Duration(milliseconds: 10000));
-      },
-      onLaunch: (Map<String, dynamic> message) async {
-        print("onLaunch: $message");
-      },
-      onResume: (Map<String, dynamic> message) async {
-        print("onResume: $message");
-      },
-    );
+    //Note - Below code is changed. Use new when uncomment!
+    // _firebaseMessaging.configure(
+    //   onMessage: (Map<String, dynamic> message) async {
+    //     print("onMessage: $message");
+    //     showOverlayNotification((context) {
+    //       return Card(
+    //         margin: const EdgeInsets.symmetric(horizontal: 4),
+    //         child: SafeArea(
+    //           child: ListTile(
+    //             leading: SizedBox.fromSize(
+    //                 size: const Size(40, 40),
+    //                 child: ClipOval(
+    //                     child: Container(
+    //                       color: Colors.black,
+    //                     ))),
+    //             title: Text(message['notification']['title']),
+    //             subtitle: Text(message['notification']['body']),
+    //             trailing: IconButton(
+    //                 icon: Icon(Icons.close),
+    //                 onPressed: () {
+    //                   OverlaySupportEntry.of(context).dismiss();
+    //                 }),
+    //           ),
+    //         ),
+    //       );
+    //     }, duration: Duration(milliseconds: 10000));
+    //   },
+    //   onLaunch: (Map<String, dynamic> message) async {
+    //     print("onLaunch: $message");
+    //   },
+    //   onResume: (Map<String, dynamic> message) async {
+    //     print("onResume: $message");
+    //   },
+    // );
   }
 
   int selectedIndex = 0;

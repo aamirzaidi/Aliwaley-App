@@ -1,13 +1,11 @@
 import 'package:aliwaley/collections/collections_url.dart';
-import 'file:///C:/Users/aamir/AndroidStudioProjects/aliwaley/lib/collections/documentaries/list_videos.dart';
+import 'package:aliwaley/collections/documentaries/list_videos.dart';
 import 'package:aliwaley/collections/nohe/nohe_khan_profiles.dart';
-import 'file:///C:/Users/aamir/AndroidStudioProjects/aliwaley/lib/collections/nohe/nohe_card.dart';
+import 'package:aliwaley/collections/nohe/nohe_card.dart';
 import 'package:flutter/material.dart';
 import 'package:aliwaley/collections/series_card.dart';
 import 'package:aliwaley/constants.dart';
 import 'package:aliwaley/collections/documentary_card.dart';
-
-
 class CollectionsWidget extends StatelessWidget {
   const CollectionsWidget({
     Key key,
