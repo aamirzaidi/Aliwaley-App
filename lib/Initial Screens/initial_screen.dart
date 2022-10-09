@@ -1,17 +1,17 @@
 import 'package:aliwaley/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
 import 'package:frino_icons/frino_icons.dart';
 import 'package:aliwaley/collections/collections_page.dart';
-import 'package:aliwaley/Initial Screens/upcoming_events.dart';
-import 'package:aliwaley/Initial Screens/trending_list.dart';
-import '../advertise_info.dart';
+// import 'package:aliwaley/Initial Screens/upcoming_events.dart';
+// import 'package:aliwaley/Initial Screens/trending_list.dart';
+// import '../advertise_info.dart';
 import '../supportus_info.dart';
-import 'package:aliwaley/Initial Screens/oganisation.dart';
+// import 'package:aliwaley/Initial Screens/oganisation.dart';
 // import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-import 'package:overlay_support/overlay_support.dart';
-import 'package:aliwaley/newspage.dart';
+// import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+// import 'package:overlay_support/overlay_support.dart';
+// import 'package:aliwaley/newspage.dart';
 
 class InitialScreen extends StatefulWidget {
   @override
@@ -61,46 +61,46 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
     // );
   }
 
-  int selectedIndex = 0;
-  final tabs = [
-    Trending(),
-    UpcomingEvents(),
-    Organisation(),
-    CollectionsWidget(),
-  ];
-
-  String selectedIndexName(){
-    switch(selectedIndex){
-      case 0 : return 'Trending';
-      case 1 : return 'Events';
-      case 2 : return 'Organisation';
-      case 3 : return 'Collection';
-      default : return 'Ali Waley';
-    }
-  }
-
+  //TabBar support commented out for now
+  // int selectedIndex = 0;
+  // final tabs = [
+  //   Trending(),
+  //   UpcomingEvents(),
+  //   Organisation(),
+  //   CollectionsWidget(),
+  // ];
+  //
+  // String selectedIndexName(){
+  //   switch(selectedIndex){
+  //     case 0 : return 'Trending';
+  //     case 1 : return 'Events';
+  //     case 2 : return 'Organisation';
+  //     case 3 : return 'Collection';
+  //     default : return 'Ali Waley';
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
     var y = MediaQuery.of(context).size.height;
 
     return Scaffold(
-    bottomNavigationBar:FancyBottomNavigation(
-      circleColor: Colors.orange,
-      inactiveIconColor: Colors.black87,
-      textColor: Colors.black87,
-      tabs: [
-        TabData(iconData: MaterialCommunityIcons.fire, title: "Trending"),
-        TabData(iconData: MaterialIcons.event_note, title: "Events"),
-        TabData(iconData: Octicons.organization, title: "Organisation"),
-        TabData(iconData: MaterialIcons.collections, title: "Collection")
-      ],
-      onTabChangedListener: (position) {
-        setState(() {
-          selectedIndex = position;
-        });
-      },
-    ),
+    // bottomNavigationBar:FancyBottomNavigation(
+    //   circleColor: Colors.orange,
+    //   inactiveIconColor: Colors.black87,
+    //   textColor: Colors.black87,
+    //   tabs: [
+    //     TabData(iconData: MaterialCommunityIcons.fire, title: "Trending"),
+    //     TabData(iconData: MaterialIcons.event_note, title: "Events"),
+    //     TabData(iconData: Octicons.organization, title: "Organisation"),
+    //     TabData(iconData: MaterialIcons.collections, title: "Collection")
+    //   ],
+    //   onTabChangedListener: (position) {
+    //     setState(() {
+    //       selectedIndex = position;
+    //     });
+    //   },
+    // ),
       backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
@@ -111,18 +111,17 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
             fontSize: 32.0,
             fontWeight: FontWeight.bold),),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 3.0),
-            child: IconButton(icon: Icon(FlutterIcons.newspaper_o_faw,color: Colors.white,), onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
-            }),
-          ),
-//          Text('NEWS',style: TextStyle(color: Colors.white,fontSize: y*0.02,fontWeight: FontWeight.bold),)
-
+          //News Page Support Commented Out
+          // Padding(
+          //   padding: const EdgeInsets.only(right: 3.0),
+          //   child: IconButton(icon: Icon(FlutterIcons.newspaper_o_faw,color: Colors.white,), onPressed: (){
+          //     Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
+          //   }),
+          // ),
         ],
         bottom: PreferredSize(preferredSize: Size.fromHeight(35.0),
           child:
-          Text(selectedIndexName(),style: TextStyle(fontFamily: 'Sniglet',fontSize: 28.0,color: Colors.white),),
+          Text("Collections",style: TextStyle(fontFamily: 'Sniglet',fontSize: 28.0,color: Colors.white),),
         ),
       ),
       drawer: Drawer(
@@ -148,18 +147,18 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
 //                Divider(color: Colors.black,),
                 Column(
                   children: <Widget>[
-                    ListTile(
-                      title: Text('News',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
-                      },
-                    ),
-                    ListTile(
-                      title: Text('Advertise Your Work',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => AdvertiseInfo()));
-                      },
-                    ),
+                    // ListTile(
+                    //   title: Text('News',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
+                    //   onTap: (){
+                    //     Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
+                    //   },
+                    // ),
+                    // ListTile(
+                    //   title: Text('Advertise Your Work',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
+                    //   onTap: (){
+                    //     Navigator.push(context, MaterialPageRoute(builder: (context) => AdvertiseInfo()));
+                    //   },
+                    // ),
                     ListTile(
                       title: Text('About Us',style: TextStyle(fontFamily: 'Gilroy',color: Colors.black,fontSize: 18.0),),
                       onTap: (){
@@ -191,7 +190,7 @@ class _InitialScreenState extends State<InitialScreen> with TickerProviderStateM
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft: Radius.circular(40.0))),
-        child: tabs[selectedIndex],
+        child: CollectionsWidget(),
       ),);
   }
 }
